@@ -35,7 +35,10 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}  # Azure token from secrets
           repo_token: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for actions
           action: 'upload'
-          #### Path to your Angular build folder
           app_location: '/'  # Root folder of your Angular app (or provide path to the app)
           api_location: ''   # Leave empty if no API is part of the app
           output_location: 'dist'  # Folder where the Angular app is built
+          # Azure Service Principal Credentials for private repo access
+          azure_client_id: ${{ secrets.AZURE_CLIENT_ID }}
+          azure_client_secret: ${{ secrets.AZURE_CLIENT_SECRET }}
+          azure_tenant_id: ${{ secrets.AZURE_TENANT_ID }}
